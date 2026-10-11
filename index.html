@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>FruitDrop</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FruitDrop">
+<link rel="apple-touch-icon" href="pwa-icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="topbar">
+    <div class="stat"><span class="lbl">Очки</span><span class="val" id="score">0</span></div>
+    <div class="stat"><span class="lbl">Рекорд</span><span class="val" id="best">0</span></div>
+    <div class="stat" id="coins"><span class="lbl">Монеты</span><span class="val" id="coinval">0</span></div>
+    <button class="iconbtn" id="btnSound" title="Звук">🔊</button>
+    <button class="iconbtn" id="btnRestart" title="Заново">⟳</button>
+  </div>
+  <div id="stage"><canvas id="c"></canvas></div>
+  <div id="bottombar">
+    <button class="boost" id="bRemove"><img class="bico" src="icons/1Bomb.png" alt=""></button>
+    <button class="boost" id="bShake"><img class="bico" src="icons/4Tornado.png" alt=""></button>
+    <button class="boost" id="bBroom"><img class="bico" src="icons/2Clean.png" alt=""></button>
+    <button class="boost" id="bGrow"><img class="bico" src="icons/3Grow.png" alt=""></button>
+  </div>
+  <div class="tip" id="tip"></div>
+  <div id="overlay" class="hidden"><div class="card" id="card"></div></div>
+
+<script src="matter.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
